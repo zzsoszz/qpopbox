@@ -1,3 +1,4 @@
+	
 	(function($)
 	{
 			
@@ -57,7 +58,7 @@
 					this.render=function()
 					{
 						this.shandowdiv=$('<div class="shandowdiv" style="background: none repeat scroll 0% 0% rgb(66, 66, 66); opacity: 0.6;">')
-						this.options.messagebox.addClass("messagebox");
+						this.options.messagebox.addClass("messagebox").css("z-index","5");
 						$(document.body).append(this.shandowdiv);
 					};
 					
@@ -70,8 +71,6 @@
 						 * messagebox  1.如果target不是widnow left=( target.offset().left+((target.width-width)/2) )  top=(target.offset.top+(target.height-messagebox.height)/2 ) width height position=absolute;
 						 *             2.如果target是widnow   left=(window.innerWidth-width)/2   top=(window.innerHeight-height)/2   width height   position=fiexd;
 						 */
-						
-						
 				        var iswin=$.isWindow(target.get(0));
 				        if(iswin)
 				        {
@@ -91,7 +90,7 @@
 				        	this.options.messagebox.css({
 				        		"position":"fixed",
 				        		"left":((winwidth-this.options.messagebox.width())/2)+"px",
-				        		"top":((winheight-this.options.messagebox.height())/2)+"px",
+				        		"top":((winheight-this.options.messagebox.height())/2)+"px"
 				        	});
 				        }
 				        else

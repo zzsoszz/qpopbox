@@ -7,14 +7,14 @@
 <link rel="stylesheet" href="jquery.qpopbox.css"   media="all"    type="text/css" />
 <link rel="stylesheet" href="bootstrap.css"   media="all"    type="text/css" />
 <script type="text/javascript"  src="jquery-1.10.2.js" ></script>
-<script type="text/javascript"  src="jquery.qpopbox.js" ></script>
+<script type="text/javascript"  src="jquery.qpopbox.js?cversion=1" ></script>
 
 
 <script>
 	$(document).ready(
 		function()
 		{
-			$(document.body).qpopbox(
+			$(window).qpopbox(
 				{
 					messagebox:$("#messagebox"),
 					save:function()
@@ -27,7 +27,7 @@
 					}
 				}
 			);
-			$(document.body).qpopbox("show");
+			$(window).qpopbox("show");
 		}
 	);
 </script>
@@ -309,6 +309,8 @@
 	<div>
 			<button id="btn1">test</button>
 	</div>
-</body>
 
+
+	
+</body>
 </html>
